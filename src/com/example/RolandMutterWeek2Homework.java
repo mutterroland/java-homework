@@ -3,9 +3,7 @@ package com.example;
 import java.util.*;
 
 public class RolandMutterWeek2Homework {
-    public static void h2Ex12() {
-        String one = "StringOne"; /*"mom"*/
-        String two = "StringTwo";
+    public static void h2Ex12(String one, String two) {
         System.out.println("String One equals String Two: " + one.equals(two));
         String reverse = "";
         for (int i = one.length() - 1; i >= 0; i--)
@@ -16,10 +14,7 @@ public class RolandMutterWeek2Homework {
             System.out.println("String one nu este palindrom");
         System.out.println("Concatenate: " + one + two);
     }
-    public static void h2Ex3() {
-        String liber = "";
-        ArrayList<String> stringArray = new ArrayList<>();
-        List<String> stringList = new ArrayList<>();
+    public static void h2Ex3(String liber, String next, String old, ArrayList<String> stringArray, List<String> stringList) {
         stringList.add("AcEd");
         stringList.add("cArS");
         stringList.add("aBeL");
@@ -27,8 +22,6 @@ public class RolandMutterWeek2Homework {
         stringList.add("hiDrA");
         stringList.add("VOinE");
         stringList.add("cevaCuX");
-        String next;
-        String old;
         for (int i = 0; i <= stringList.size() - 1; i++) {
             next = stringList.get(i).toLowerCase();
             if (next.startsWith("a") || next.startsWith("e") || next.startsWith("i") || next.startsWith("o") || next.startsWith("u")) {
@@ -44,8 +37,7 @@ public class RolandMutterWeek2Homework {
         System.out.println(stringArray);
         System.out.println(liber);
     }
-    public static void h2Ex4(){
-        HashMap<String, String> angajati = new HashMap<>();
+    public static void h2Ex4(HashMap<String,String> angajati){
         angajati.put("Paul", "paul@softvision.ro");
         angajati.put("Raul", "raul@softvision.ro");
         angajati.put("Eugen", "eugen@softvision.ro");
