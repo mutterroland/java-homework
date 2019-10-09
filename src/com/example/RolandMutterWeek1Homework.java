@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class RolandMutterWeek1Homework {
     public static void h1Ex4(boolean c, char h, int e, long s, double d, String str, String[] mazda) {
+        System.out.println();
         System.out.println(c);
         System.out.println(h);
         System.out.println(e);
