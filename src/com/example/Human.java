@@ -5,8 +5,12 @@ public class Human extends Interface {
     int ammo = 200;
 
     public void shootAlien(Alien alien){
-        alien.health -= 25;
-        this.ammo = ammo - 15;
+        if(isDead = false) {
+            alien.health -= 25;
+            this.ammo = ammo - 15;
+        }else{
+            System.out.println("Human is dead, can't attack!");
+        }
     }
 
     public int getAmmo() {

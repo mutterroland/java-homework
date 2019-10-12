@@ -28,13 +28,17 @@ public class Alien extends Interface {
     }
 
     public void biteHuman(Human human){
-        if(energy >= 80 && energy <= 100) {
-            human.health -= 25;
-        }else if(energy <= 80 && energy >= 50){
-            human.health -= 15;
-        }else if(energy <= 50 && energy >= 10){
-            human.health -= 10;
-        }
+        if(isDead = false){
+            if(energy >= 80 && energy <= 100) {
+                human.health -= 25;
+            }else if(energy <= 80 && energy >= 50){
+                human.health -= 15;
+            }else if(energy <= 50 && energy >= 10){
+                human.health -= 10;
+            }
         this.energy -= 10;
+        }else{
+            System.out.println("Aliens is dead, can't attack");
+        }
     }
 }

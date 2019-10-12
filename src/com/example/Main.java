@@ -51,5 +51,6 @@ public class Main {
         a1.biteHuman(h1);
         System.out.println(h1.getHealth());
         System.out.println(h1.isDead());
+        h1.shootAlien(a1);
     }
 }
