@@ -13,9 +13,6 @@ public class Interface {
     }
 
     public boolean isDead() {
-        if(health == 0){
-            isDead = true;
-        }
         return isDead;
     }
 
