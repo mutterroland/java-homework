@@ -22,4 +22,12 @@ public class Human extends Interface {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    @Override
+    public boolean isDead() {
+        if(health <= 0){
+            isDead = true;
+        }
+        return isDead;
+    }
 }

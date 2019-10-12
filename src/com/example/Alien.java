@@ -15,6 +15,14 @@ public class Alien extends Interface {
         this.health = health;
     }
 
+    @Override
+    public boolean isDead() {
+        if(health <= 0){
+            isDead = true;
+        }
+        return isDead;
+    }
+
     public int getEnergy() {
         return energy;
     }
