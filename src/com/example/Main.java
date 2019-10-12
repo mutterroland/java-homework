@@ -32,5 +32,15 @@ public class Main {
         org.update("roland", "Fanel", 26, 234, 24);
         System.out.println("Vector final dupa toate operatiile");
         org.afiseaza();
+
+        Human h1 = new Human();
+        Alien a1 = new Alien();
+
+        System.out.println("Initial Human Health and Alien energy: " + h1.getHealth() + " " + a1.getEnergy());
+        a1.biteHuman(h1);
+        System.out.println("Human health and Alien energy after first bite : " + h1.getHealth() + " " + a1.getEnergy());
+        h1.shootAlien(a1);
+        h1.shootAlien(a1);
+        System.out.println("Alien health and Human ammo after 2 shoots : " + a1.getHealth() + " " + h1.getAmmo());
     }
 }
