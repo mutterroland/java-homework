@@ -42,15 +42,10 @@ public class Main {
         h1.shootAlien(a1);
         h1.shootAlien(a1);
         System.out.println("Alien health and Human ammo after 2 shoots : " + a1.getHealth() + " " + h1.getAmmo());
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
-        a1.biteHuman(h1);
         System.out.println(h1.getHealth());
         System.out.println(h1.isDead());
-        h1.shootAlien(a1);
+
+
+
     }
 }

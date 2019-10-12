@@ -28,7 +28,7 @@ public class Alien extends Interface {
     }
 
     public void biteHuman(Human human){
-        if(isDead = false){
+        if(!isDead && energy >= 10 && human.getHealth() >= 1){
             if(energy >= 80 && energy <= 100) {
                 human.health -= 25;
             }else if(energy <= 80 && energy >= 50){
@@ -36,9 +36,11 @@ public class Alien extends Interface {
             }else if(energy <= 50 && energy >= 10){
                 human.health -= 10;
             }
-        this.energy -= 10;
+            this.energy -= 10;
+        }else if(energy < 10 && !isDead){
+            System.out.println("Alien doesn't have enough energy to damage Human!");
         }else{
-            System.out.println("Aliens is dead, can't attack");
+            System.out.println("Alien is dead, can't attack");
         }
     }
 }
