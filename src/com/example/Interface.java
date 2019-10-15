@@ -1,26 +1,11 @@
 package com.example;
 
-public class Interface {
-    int health;
-    boolean isDead = false;
+interface Interface {
 
-    public int getHealth() {
-        return health;
-    }
+    public int getHealth();
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
+    public void setHealth(int health);
 
-    public boolean isDead() {
-        return isDead;
-    }
+    public boolean isDead();
 
-    public void setDead(boolean dead) {
-        isDead = dead;
-    }
-
-    public void dealDamage(int damage) {
-        health -= damage;
-    }
 }

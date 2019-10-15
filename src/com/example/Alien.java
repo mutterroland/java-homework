@@ -1,9 +1,10 @@
 package com.example;
 
-public class Alien extends Interface {
+public class Alien implements Interface {
 
     int health = 200;
     int energy = 100;
+    boolean isDead = false;
 
     @Override
     public int getHealth() {
@@ -27,6 +28,7 @@ public class Alien extends Interface {
         return energy;
     }
 
+
     public void biteHuman(Human human){
         if(!isDead && energy >= 10 && human.getHealth() >= 1){
             if(energy >= 80 && energy <= 100) {
@@ -37,9 +39,12 @@ public class Alien extends Interface {
                 human.health -= 10;
             }
             this.energy -= 10;
-        }else if(energy < 10 && !isDead){
+            human.isDead();
+        }else if(energy < 10 && !isDead) {
             System.out.println("Alien doesn't have enough energy to damage Human!");
-        }else{
+        }else if(human.getHealth() < 0){
+            System.out.println("Human is already dead");
+        }else if(isDead){
             System.out.println("Alien is dead, can't attack");
         }
     }
